@@ -1,14 +1,1 @@
-[
-  {
-    "title": "React Native",
-    "price": "10000",
-    "img": "https://androiddev.apptractor.ru/wp-content/uploads/2018/07/react-native.png",
-    "id": "ee0fae02-fedc-4984-b878-214cc3019760"
-  },
-  {
-    "title": "Angular 11",
-    "price": "15000",
-    "img": "https://www.jsexpert.net/wp-content/themes/clevercourse-v2-03/assets/img/angular-4-img/angular-img.png",
-    "id": "5d5e8d67-64f2-4aa2-9ed0-103a81d47d9e"
-  }
-]
+[{"title":"React.js","price":"16000","img":"https://androiddev.apptractor.ru/wp-content/uploads/2018/07/react-native.png","id":"ee0fae02-fedc-4984-b878-214cc3019760"},{"title":"Angular 11","price":"15000","img":"https://www.jsexpert.net/wp-content/themes/clevercourse-v2-03/assets/img/angular-4-img/angular-img.png","id":"5d5e8d67-64f2-4aa2-9ed0-103a81d47d9e"}]
