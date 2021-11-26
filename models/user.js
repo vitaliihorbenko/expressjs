@@ -29,7 +29,7 @@ const userSchema = new Schema({
 
 userSchema.methods.addToCart = function (course) {
   const items = [...this.cart.items];
-  const idx = cloneItems.findIndex((c) => {
+  const idx = items.findIndex((c) => {
     return c.courseId.toString() === course._id.toString();
   });
 
