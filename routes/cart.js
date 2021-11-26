@@ -9,6 +9,12 @@ function mapCartItems(cart) {
   }));
 }
 
+function computePrice(courses) {
+  return courses.reduce((total, course) => {
+    return (total += course.price * course.count);
+  }, 0);
+}
+
 router.post("/add", async (req, res) => {
   const course = await Course.findById(req.body.id);
   await req.user.addToCart(course);
@@ -21,14 +27,14 @@ router.delete("/remove/:id", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  const user = await req.user.populate("cart.items.courseId").execPopulate();
+  const user = await req.user.populate("cart.items.courseId");
   const courses = mapCartItems(user.cart);
 
   res.render("cart", {
     title: "Cart",
     isCart: true,
     courses: courses,
-    price: 0,
+    price: computePrice(courses),
   });
 });
 
