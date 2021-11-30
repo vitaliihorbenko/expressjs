@@ -42,10 +42,10 @@ app.use("/cart", cartRoutes);
 app.use("/add", addRoutes);
 
 const PORT = process.env.PORT || 3000;
+const password = "Snake0241";
 
 async function start() {
   try {
-    const password = "Snake0241";
     const url = `mongodb+srv://Vitalii:${password}@cluster0.4em9n.mongodb.net/nodeJsUdemy?retryWrites=true&w=majority`;
     await mongoose.connect(url, {
       useNewUrlParser: true,

@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const course = new Schema({
+const courseSchema = new Schema({
   title: {
     type: String,
     required: true,
@@ -25,4 +25,4 @@ courseSchema.method("toClient", function () {
   return course;
 });
 
-module.exports = model("Course", course);
+module.exports = model("Course", courseSchema);
